@@ -1,6 +1,7 @@
 package ServiceImpl;
 
 import model.*;
+import service.ReadWriteService;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
-public class ReadWriteServiceImpl {
+public class ReadWriteServiceImpl implements ReadWriteService {
     public Problem read(File file) throws FileNotFoundException {
         Problem problem = new Problem();
 
@@ -60,5 +61,10 @@ public class ReadWriteServiceImpl {
         }
 
         return problem;
+    }
+
+    @Override
+    public void write(Solution solution, File outputFile) throws FileNotFoundException {
+
     }
 }
