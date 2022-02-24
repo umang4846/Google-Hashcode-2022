@@ -1,19 +1,20 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
-    List<ProjectCompleted> projects;
+    List<ProjectAssigned> projectsAssigned;
 
-    public Solution(List<ProjectCompleted> projects) {
-        this.projects = projects;
+    public Solution(List<ProjectAssigned> projects) {
+        projectsAssigned = new ArrayList<>();
     }
 
-    public List<ProjectCompleted> getProjects() {
-        return projects;
+    public List<ProjectAssigned> getProjects() {
+        return projectsAssigned;
     }
 
-    public void setProjects(List<ProjectCompleted> projects) {
-        this.projects = projects;
+    public void addProjects(ProjectAssigned projectCompleted) {
+        this.projectsAssigned.add(projectCompleted);
     }
 }
