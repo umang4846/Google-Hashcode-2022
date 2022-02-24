@@ -5,19 +5,19 @@ import java.util.List;
 
 public class ProjectAssigned {
     private Integer startDay;
-    private String projectName;
+    private Project project;
     private List<Contributor> contributors;
 
     public ProjectAssigned() {
         contributors = new ArrayList<>();
     }
 
-    public String getProjectName() {
-        return projectName;
+    public Project getProjectName() {
+        return project;
     }
 
-    public ProjectAssigned setProjectName(String projectName) {
-        this.projectName = projectName;
+    public ProjectAssigned setProjectName(Project project) {
+        this.project = project;
         return this;
     }
 
